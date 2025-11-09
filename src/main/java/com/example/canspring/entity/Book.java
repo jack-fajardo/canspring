@@ -1,3 +1,7 @@
+// NOTE:
+// My entity defines the database table structure handled by Hibernate.
+// JSON from clients goes into a DTO first, then we copy the DTO fields here
+// to safely save them in the database (that is why it has @setters).
 package com.example.canspring.entity;
 
 import java.time.LocalDateTime;
@@ -10,8 +14,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Setter
+@Getter
 public class Book {
 
     @Id
