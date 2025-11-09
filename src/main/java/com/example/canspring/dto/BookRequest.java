@@ -4,8 +4,6 @@
 // I have a custom validation rule here for limiting size of the description
 package com.example.canspring.dto;
 
-import com.example.canspring.validation.DescriptionLimit;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +16,7 @@ public class BookRequest {
     private String title;
     private String author;
 
-    @DescriptionLimit
+    //@DescriptionLimit
     private String description;
     private String file_name;
     private String file_url;
