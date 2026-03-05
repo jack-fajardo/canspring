@@ -1,13 +1,12 @@
-package com.example.canspring;
+package com.example.tennis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CanspringApplication {
+public class TennisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CanspringApplication.class, args);
+        SpringApplication.run(TennisApplication.class, args);
     }
-
 }
