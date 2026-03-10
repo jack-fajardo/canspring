@@ -4,41 +4,41 @@ public class TennisMatchRequestDto {
 
     private String playerOne;
     private String playerTwo;
-    private String score;
     private String status;
+    private String score;
 
     public TennisMatchRequestDto() {
     }
 
     public String getPlayerOne() {
-        return playerOne;
+        return this.playerOne;
+    }
+
+    public String getPlayerTwo() {
+        return this.playerTwo;
+    }
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    public String getScore() {
+        return this.score;
     }
 
     public void setPlayerOne(String playerOne) {
         this.playerOne = playerOne;
     }
 
-    public String getPlayerTwo() {
-        return playerTwo;
-    }
-
     public void setPlayerTwo(String playerTwo) {
         this.playerTwo = playerTwo;
     }
 
-    public String getScore() {
-        return score;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setScore(String score) {
         this.score = score;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

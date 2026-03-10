@@ -27,7 +27,7 @@ public class TennisMatchController {
     }
 
     @GetMapping
-    public ResponseEntity<List<TennisMatchResponseDto>> getAll() {
+    public ResponseEntity<List<TennisMatchResponseDto>> getAllMatches() {
         return ResponseEntity.ok(service.getAll());
     }
 
@@ -37,21 +37,18 @@ public class TennisMatchController {
     }
 
     @PostMapping
-    public ResponseEntity<TennisMatchResponseDto> create(
-            @RequestBody TennisMatchRequestDto dto) {
+    public ResponseEntity<TennisMatchResponseDto> create(@RequestBody TennisMatchRequestDto dto) {
         return ResponseEntity.ok(service.create(dto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TennisMatchResponseDto> update(
-            @PathVariable Long id,
-            @RequestBody TennisMatchRequestDto dto) {
+    public ResponseEntity<TennisMatchResponseDto> update(@RequestBody TennisMatchRequestDto dto, @PathVariable Long id) {
         return ResponseEntity.ok(service.update(id, dto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id) {
+    public ResponseEntity<String> deleteById(@PathVariable Long id) {
         service.delete(id);
-        return ResponseEntity.ok("Match deleted successfully");
+        return ResponseEntity.ok("Operation Successful");
     }
 }
