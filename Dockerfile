@@ -3,17 +3,22 @@ FROM eclipse-temurin:17-jdk
 # Set work directory
 WORKDIR /app
 
-# Copy pom.xml and download dependencies (cached)
+# Copy pom.xml and maven wrapper
 COPY pom.xml .
 COPY mvnw ./
 COPY .mvn .mvn/
+
+# Fix permissions (essential for linux environment)
+RUN chmod +x mvnw
+
+# Download dependencies (Docker cache layer)
 RUN ./mvnw dependency:go-offline
 
-# Copy the entire source code
+# Copy source
 COPY src ./src
 
-# Expose port 8080
+# Expose port
 EXPOSE 8080
 
-# Run Spring Boot in dev mode (restart + live reload)
+# Run Spring Boot
 ENTRYPOINT ["./mvnw", "spring-boot:run"]
