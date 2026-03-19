@@ -1,0 +1,35 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName": "Backend",
+    "snippets": [
+      {
+        "id": 101,
+        "title": "Spring Boot Dockerfile",
+        "language": "dockerfile",
+        "content": "FROM eclipse-temurin:21-jdk...",
+        "createdAt": "2024-05-20T10:00:00"
+      },
+      {
+        "id": 102,
+        "title": "JPA One-to-Many Mapping",
+        "language": "java",
+        "content": "@OneToMany(mappedBy = \"category\")...",
+        "createdAt": "2024-05-21T12:30:00"
+      }
+    ]
+  },
+  {
+    "categoryId": 2,
+    "categoryName": "Linux Utils",
+    "snippets": [
+      {
+        "id": 201,
+        "title": "Find and Replace Recursively",
+        "language": "bash",
+        "content": "grep -rl 'old' . | xargs sed -i 's/old/new/g'",
+        "createdAt": "2024-05-22T09:15:00"
+      }
+    ]
+  }
+]
